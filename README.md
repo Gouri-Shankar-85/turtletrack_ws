@@ -1,22 +1,25 @@
 Turtlebot3 Trajectory Tracking Simulation
 Setup and Launch
 Build and source workspace:
-
-bash
 ```
+bash
 cd ~/ROS/turtletrack_ws
 colcon build
 source install/setup.bash
 ros2 launch turtlebot3 simulation.launch.py
 ```
 Launch the Turtlebot3 simulation:
-
+```
 bash
 ros2 launch turtlebot3 simulation.launch.py
-Launch the trajectory controller:
+```
 
+Launch the trajectory controller:
+```
 bash
 ros2 launch trajectory_controller trajectory_follow.launch.py
+```
+
 Project Overview
 This project implements trajectory tracking for a differential drive robot (Turtlebot3) using ROS2 in simulation.
 

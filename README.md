@@ -18,10 +18,11 @@ Launch the trajectory controller:
 ros2 launch trajectory_controller trajectory_follow.launch.py
 ```
 
-**Project Overview**
+##**Project Overview**
+
 This project implements trajectory tracking for a differential drive robot (Turtlebot3) using ROS2 in simulation.
 
-**File Descriptions :**
+##**File Descriptions :**
 
 **simulation.launch.py:** Launches the Turtlebot3 Gazebo simulation environment.
 
@@ -41,7 +42,8 @@ This project implements trajectory tracking for a differential drive robot (Turt
 
 **ros_ign_bridge.launch.py:** Bridges ROS2 and Ignition Gazebo topics for communication.
 
-**Design Logic**
+##**Design Logic**
+
 The robot's waypoints are defined in the waypoints.yaml file.
 
 trajectory_generation.py creates smooth trajectories from these waypoints.
@@ -52,7 +54,8 @@ trajectory_controller.py uses feedback control to follow the generated trajector
 
 Launch files modularize simulation and control components to allow easy testing.
 
-**Extending to a Real Robot**
+##**Extending to a Real Robot**
+
 Replace simulation launch files with hardware-specific launch files.
 
 Integrate real sensor data inputs in place of simulated data.

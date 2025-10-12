@@ -3,13 +3,16 @@ Setup and Launch
 Build and source workspace:
 
 bash
+```
 cd ~/ROS/turtletrack_ws
 colcon build
 source install/setup.bash
+ros2 launch turtlebot3 simulation.launch.py
+```
 Launch the Turtlebot3 simulation:
 
 bash
-  ros2 launch turtlebot3 simulation.launch.py
+ros2 launch turtlebot3 simulation.launch.py
 Launch the trajectory controller:
 
 bash

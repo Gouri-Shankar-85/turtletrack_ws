@@ -1,0 +1,44 @@
+waypoints:
+  # Simple snake path through cylinder grid - NO LOOPS, NO CROSSINGS
+  # Grid cylinders: x = {-1.1, 0, 1.1}, y = {-1.1, 0, 1.1}, radius = 0.15m
+  # Strategy: Weave through grid in S-pattern, then proceed to head and end
+  
+  # Start from left side
+  - [-3.0, 0.0]
+  - [-2.0, 0.0]
+  
+  # Enter grid from left, go UP first
+  - [-1.65, 0.0]             # Between left column cylinders
+  - [-1.65, 0.6]             # Move up in left column
+  - [-1.4, 0.9]              # Exit left column upward
+  
+  # Cross to center column at TOP
+  - [-0.8, 1.05]             # Top passage
+  - [-0.3, 1.05]             # Approaching center from top
+  - [0.0, 0.85]              # Enter center column from top
+  
+  # Go DOWN through center
+  - [0.0, 0.4]               # Middle of center column
+  - [0.0, -0.4]              # Continue down
+  - [0.0, -0.85]             # Exit center column at bottom
+  
+  # Cross to right column at BOTTOM
+  - [0.3, -1.05]             # Bottom passage
+  - [0.8, -1.05]             # Continue right
+  - [1.4, -0.9]              # Approaching right column
+  
+  # Go UP through right column
+  - [1.65, -0.6]             # Enter right column from bottom
+  - [1.65, 0.0]              # Middle of right column
+  - [1.65, 0.6]              # Continue up
+  - [1.8, 0.8]               # Exit right column upward
+  
+  # Proceed to head (NO RETURN)
+  - [2.2, 0.6]               # Moving toward head
+  - [2.6, 0.4]               # Approaching head
+  - [3.0, 0.2]               # Near head
+  - [3.5, 0.0]               # AT HEAD (center at 3.5, 0)
+  
+  # Pass head and END beyond it
+  - [4.0, 0.0]               # Past the head
+  - [4.5, 0.0]               # End point (no loop back)

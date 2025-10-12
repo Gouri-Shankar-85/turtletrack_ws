@@ -1,4 +1,5 @@
-Turtlebot3 Trajectory Tracking Simulation
+**Turtlebot3 Trajectory Tracking Simulation**
+
 Setup and Launch
 Build and source workspace:
 ```bash
@@ -17,29 +18,30 @@ Launch the trajectory controller:
 ros2 launch trajectory_controller trajectory_follow.launch.py
 ```
 
-Project Overview
+**Project Overview**
 This project implements trajectory tracking for a differential drive robot (Turtlebot3) using ROS2 in simulation.
 
-File Descriptions
-simulation.launch.py: Launches the Turtlebot3 Gazebo simulation environment.
+**File Descriptions :**
 
-trajectory_follow.launch.py: Starts the controller node to make the robot follow predefined trajectories.
+**simulation.launch.py:** Launches the Turtlebot3 Gazebo simulation environment.
 
-trajectory_controller.py: Contains the main control logic to track the trajectory by computing velocity commands.
+**trajectory_follow.launch.py:** Starts the controller node to make the robot follow predefined trajectories.
 
-trajectory_generation.py: Generates smooth trajectories based on predefined waypoints.
+**trajectory_controller.py:** Contains the main control logic to track the trajectory by computing velocity commands.
 
-path_smoother.py: Implements path smoothing algorithms for smoother robot motion.
+**trajectory_generation.py:** Generates smooth trajectories based on predefined waypoints.
 
-smoothed_path_visualizer.py: ROS node for visualizing the smoothed trajectory.
+**path_smoother.py:** Implements path smoothing algorithms for smoother robot motion.
 
-waypoints.yaml: Defines the set of waypoints for the robot to follow during the simulation.
+**smoothed_path_visualizer.py:** ROS node for visualizing the smoothed trajectory.
 
-robot_state_publisher.launch.py: Publishes the robot state information in ROS.
+**waypoints.yaml:** Defines the set of waypoints for the robot to follow during the simulation.
 
-ros_ign_bridge.launch.py: Bridges ROS2 and Ignition Gazebo topics for communication.
+**robot_state_publisher.launch.py:** Publishes the robot state information in ROS.
 
-Design Logic
+**ros_ign_bridge.launch.py:** Bridges ROS2 and Ignition Gazebo topics for communication.
+
+**Design Logic**
 The robot's waypoints are defined in the waypoints.yaml file.
 
 trajectory_generation.py creates smooth trajectories from these waypoints.
@@ -50,7 +52,7 @@ trajectory_controller.py uses feedback control to follow the generated trajector
 
 Launch files modularize simulation and control components to allow easy testing.
 
-Extending to a Real Robot
+**Extending to a Real Robot**
 Replace simulation launch files with hardware-specific launch files.
 
 Integrate real sensor data inputs in place of simulated data.
